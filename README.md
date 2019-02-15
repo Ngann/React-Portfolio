@@ -3,4 +3,4 @@ Created using React and Material UI
 
 
 
-# ![demo](./src/assets/images/profile.jpg)
+# ![demo](./src/assets/images/Profile.jpg)
