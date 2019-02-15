@@ -26,13 +26,9 @@ $ git clone git repository link
 ```
 $ npm install
 ```
-3. Build the app:
+3. To run the program:
 ```
-$ npm run build
-```
-4.  To run the program:
-```
-$ ng serve
+$ npm start
 ```
 
 ## API
