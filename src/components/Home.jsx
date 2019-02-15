@@ -12,19 +12,39 @@ const styles = theme => ({
     flexGrow: 1,
   },
   image: {
-    backgroundColor: 'lightblue',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
   paper: {
+    backgroundColor: '#b4e4fd',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
   pic: {
-    paddingTop: '150px',
+    paddingTop: '50px',
     height: '250px',
+  },
+  title: {
+    fontSize: '40px',
+    fontWeight: 'bold',
+    color: 'blue',
+    justify: 'center',
+    textAlign: 'center',
+  },
+  stacks: {
+    borderTop: '5px dotted white',
+    width: '50%',
+    margin: 'auto',
+    color: 'white',
+  },
+  box: {
+    borderTop: '5px dotted white',
+    width: '50%',
+    margin: 'auto',
+    color: 'white',
+    backgroundColor: '#b4e4fd'
   },
 });
 
@@ -35,30 +55,38 @@ function Home(props) {
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12}>
-          <Paper className={classes.image}>
-          <div><img className={classes.pic} src={reallyAdorablePuppy}/></div>
-          </Paper>
+          <div className={classes.image}>
+            <div><img className={classes.pic} src={reallyAdorablePuppy}/></div>
+          </div>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>
-          <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+          <Typography className={classes.title} variant="h4" color="inherit" noWrap>
             Web Developer
           </Typography>
-          </Paper>
+        </Grid >
+        <Grid item xs={4} sm={2}>
+          <p className={classes.paper}>HTML/CSS</p>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>
-          <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Frameworks
-          </Typography>
-          </Paper>
+        <Grid item xs={4} sm={2}>
+          <p className={classes.paper}>JavaScript</p>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>
-          <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Languages
-          </Typography>
-          </Paper>
+        <Grid item xs={4} sm={2}>
+          <p className={classes.paper}>React</p>
+        </Grid>
+        <Grid item xs={4} sm={2}>
+          <p className={classes.paper}>Angular</p>
+        </Grid>
+        <Grid item xs={4} sm={2}>
+          <p className={classes.paper}>Ruby</p>
+        </Grid>
+        <Grid item xs={4} sm={2}>
+          <p className={classes.paper}>Rails</p>
+        </Grid>
+        <Grid item xs={4} sm={2}>
+          <p className={classes.paper}>Git/Github</p>
+        </Grid>
+        <Grid item xs={4} sm={2}>
+          <p className={classes.paper}>Postgres</p>
         </Grid>
       </Grid>
     </div>
