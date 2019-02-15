@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Project(props){
   return (
     <div>
-        <style jsx>{`
+      <style jsx>{`
           div {
             background-color: red;
           }
