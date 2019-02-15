@@ -1,4 +1,9 @@
 import React from 'react';
+import NavBar from './NavBar';
+import Header from './Header';
+import Resume from './Resume';
+import Contact from './Contact';
+import About from './About';
 import Navigation from './Navigation';
 import ProjectList from './ProjectList';
 import { Switch, Route } from 'react-router-dom';
@@ -10,7 +15,11 @@ import Error404 from './Error404';
 function App(){
   return (
     <div>
-      <Navigation/>
+      <NavBar/>
+      <Header/>
+      <About/>
+      <Resume/>
+      <Contact/>
       <Types/>
       <Switch>
         <Route exact path='/' component={ProjectList} />
