@@ -5,10 +5,9 @@
 
 _This portfolio was created with React and Material UI. The flow chart was created using draw.io ._
 
-<<<<<<< HEAD
 * Click here to view page "Link".
 
-# ![component](./src/assets/images/profile.jpg)
+# ![demo](./src/assets/images/Profile.jpg)
 
 ## Table of content
 
@@ -63,6 +62,3 @@ export const masterFirebaseConfig = {
 
 ## License
 * This project is licensed under the MIT License - see the LICENSE.md file for details
-=======
-# ![demo](./src/assets/images/Profile.jpg)
->>>>>>> 67a09e649fcb675d16ac0329f1ff0dbc596049cd
