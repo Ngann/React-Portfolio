@@ -3,14 +3,15 @@ import Navigation from './Navigation';
 import ProjectList from './ProjectList';
 import { Switch, Route } from 'react-router-dom';
 import ContactForm from './ContactForm';
-import ImageExample from './ImageExample';
+import Types from './ImageExample';
 import Error404 from './Error404';
+
 
 function App(){
   return (
     <div>
       <Navigation/>
-      <ImageExample/>
+      <Types/>
       <Switch>
         <Route exact path='/' component={ProjectList} />
         <Route path='/newcard' component={ContactForm} />
