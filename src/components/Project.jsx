@@ -6,7 +6,10 @@ function Project(props){
     <div>
       <style jsx>{`
           div {
-            background-color: red;
+            margin: 5%;
+            background-color: lightgrey;
+            border: 1px solid black;
+            padding: 2%;
           }
         `}</style>
       <h3>{props.location} - {props.names}</h3>
