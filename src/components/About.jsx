@@ -6,16 +6,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import reallyAdorablePuppy from '../assets/images/cutestpuppy.jpeg';
 import Typography from '@material-ui/core/Typography';
-import WebFont from 'webfontloader';
-import IconButton from '@material-ui/core/IconButton';
-import SvgIcon from '@material-ui/core/SvgIcon';
-import BookIcon from '@material-ui/icons/Bookmarks';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import AddIcon from '@material-ui/icons/Add';
-import FaceIcon from '@material-ui/icons/Face';
-import SaveIcon from '@material-ui/icons/Save';
-import EditIcon from '@material-ui/icons/Edit';
 
 const styles = theme => ({
   root: {

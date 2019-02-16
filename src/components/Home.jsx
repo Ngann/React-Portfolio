@@ -4,13 +4,19 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import reallyAdorablePuppy from '../assets/images/cutestpuppy.jpeg';
+import HomeImage from '../assets/images/trees.jpeg';
 import Typography from '@material-ui/core/Typography';
 import WebFont from 'webfontloader';
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import BookIcon from '@material-ui/icons/Bookmarks';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
+import FaceIcon from '@material-ui/icons/Face';
+import SaveIcon from '@material-ui/icons/Save';
+import EditIcon from '@material-ui/icons/Edit';
+import AutoScale from 'react-auto-scale';
 
 const styles = theme => ({
   root: {
@@ -20,7 +26,6 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    border:'1px solid black'
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -28,8 +33,8 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
   },
   pic: {
-    height: '250px',
-    borderRadius: '200px',
+    width: '100%',
+    height: 'auto',
   },
   title: {
     justify: 'center',
@@ -37,17 +42,18 @@ const styles = theme => ({
     border:'1px solid black'
   },
   box: {
-    width: '50%',
-    margin: 'auto',
-    color: 'white',
-    border:'1px solid black'
-  },
-  social: {
     width: '80%',
     margin: 'auto',
     color: 'white',
     border:'1px solid black'
   },
+  social: {
+    width: '50%',
+    margin: 'auto',
+    color: 'red',
+    border:'1px solid black',
+    textAlign: 'center',
+  }
 });
 
 function Home(props) {
@@ -57,9 +63,11 @@ function Home(props) {
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12}>
+        <AutoScale>
           <div className={classes.image}>
-            <div><img className={classes.pic} src={reallyAdorablePuppy}/></div>
+          <div><img className={classes.pic} src={HomeImage}/></div>
           </div>
+        </AutoScale>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h2" gutterBottom className={classes.title}>
@@ -69,7 +77,7 @@ function Home(props) {
       </Grid >
       <Grid container className={classes.box}>
         <Grid item xs sm={3}>
-          <Typography variant="button" gutterBottom>
+          <Typography variant="button" >
             <p className={classes.paper}>HTML/CSS</p>
           </Typography>
         </Grid>
@@ -111,19 +119,18 @@ function Home(props) {
       </Grid>
 
       <div>
-      <Grid container className={classes.social}>
-        <Grid item xs sm={3}>
-          <Typography variant="button" gutterBottom>
-            <p className={classes.paper}>Social Links</p>
-          </Typography>
-          <IconButton aria-label="Delete">
-            <BookIcon/>
-          </IconButton>
-          <IconButton aria-label="Delete">
-            <AddIcon/>
-          </IconButton>
-        </Grid>
-      </Grid>
+      <div className={classes.about} />
+      <section className={classes.social}>
+      <IconButton color="inherit" aria-label="Edit">
+        <EditIcon />
+      </IconButton>
+      <IconButton color="inherit" aria-label="Save">
+        <SaveIcon />
+      </IconButton>
+      <IconButton color="inherit" aria-label="Face">
+        <FaceIcon />
+      </IconButton>
+      </section>
       </div>
     </div>
   );

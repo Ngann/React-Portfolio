@@ -1,9 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import Home from './Home';
-import Header from './Header';
 import Resume from './Resume';
-import Contact from './Contact';
 import About from './About';
 import Navigation from './Navigation';
 import ProjectList from './ProjectList';
@@ -18,10 +16,9 @@ function App(){
     <div>
       <NavBar/>
       <Home/>
-      <Header/>
       <About/>
       <Resume/>
-      <Contact/>
+      <ContactForm/>
       <Types/>
       <Switch>
         <Route exact path='/' component={ProjectList} />
