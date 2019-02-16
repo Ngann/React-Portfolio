@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
+import Home from './Home';
 import Header from './Header';
 import Resume from './Resume';
 import Contact from './Contact';
@@ -16,6 +17,7 @@ function App(){
   return (
     <div>
       <NavBar/>
+      <Home/>
       <Header/>
       <About/>
       <Resume/>
@@ -23,7 +25,7 @@ function App(){
       <Types/>
       <Switch>
         <Route exact path='/' component={ProjectList} />
-        <Route path='/newcard' component={ContactForm} />
+        <Route path='/contactform' component={ContactForm} />
         <Route component={Error404} />
       </Switch>
     </div>

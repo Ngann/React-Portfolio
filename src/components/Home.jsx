@@ -9,7 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import WebFont from 'webfontloader';
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import BookIcon from '@material-ui/icons/Bookmarks';
+import AddIcon from '@material-ui/icons/Add';
 
 const styles = theme => ({
   root: {
@@ -116,9 +117,10 @@ function Home(props) {
             <p className={classes.paper}>Social Links</p>
           </Typography>
           <IconButton aria-label="Delete">
-          <SvgIcon>
-          <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" />
-          </SvgIcon>
+            <BookIcon/>
+          </IconButton>
+          <IconButton aria-label="Delete">
+            <AddIcon/>
           </IconButton>
         </Grid>
       </Grid>

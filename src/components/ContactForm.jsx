@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function NewCardForm(){
+function ContactForm(){
   return (
     <div>
       <form>
@@ -21,4 +22,4 @@ function NewCardForm(){
   );
 }
 
-export default NewCardForm;
+export default ContactForm;
