@@ -17,14 +17,13 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
   },
   paper: {
-    backgroundColor: '#b4e4fd',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
   pic: {
-    paddingTop: '50px',
     height: '250px',
+    borderRadius: '200px',
   },
   title: {
     fontSize: '40px',
@@ -34,17 +33,14 @@ const styles = theme => ({
     textAlign: 'center',
   },
   stacks: {
-    borderTop: '5px dotted white',
     width: '50%',
     margin: 'auto',
     color: 'white',
   },
   box: {
-    borderTop: '5px dotted white',
     width: '50%',
     margin: 'auto',
     color: 'white',
-    backgroundColor: '#b4e4fd'
   },
 });
 
@@ -64,28 +60,30 @@ function Home(props) {
             Web Developer
           </Typography>
         </Grid >
-        <Grid item xs={4} sm={2}>
+      </Grid >
+      <Grid container className={classes.box}>
+        <Grid item xs sm={3}>
           <p className={classes.paper}>HTML/CSS</p>
         </Grid>
-        <Grid item xs={4} sm={2}>
+        <Grid item xs sm={3}>
           <p className={classes.paper}>JavaScript</p>
         </Grid>
-        <Grid item xs={4} sm={2}>
+        <Grid item xs sm={3}>
           <p className={classes.paper}>React</p>
         </Grid>
-        <Grid item xs={4} sm={2}>
+        <Grid item xs sm={3}>
           <p className={classes.paper}>Angular</p>
         </Grid>
-        <Grid item xs={4} sm={2}>
+        <Grid item xs sm={3}>
           <p className={classes.paper}>Ruby</p>
         </Grid>
-        <Grid item xs={4} sm={2}>
+        <Grid item xs sm={3}>
           <p className={classes.paper}>Rails</p>
         </Grid>
-        <Grid item xs={4} sm={2}>
+        <Grid item xs sm={3}>
           <p className={classes.paper}>Git/Github</p>
         </Grid>
-        <Grid item xs={4} sm={2}>
+        <Grid item xs sm={3}>
           <p className={classes.paper}>Postgres</p>
         </Grid>
       </Grid>
