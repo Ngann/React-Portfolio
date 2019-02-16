@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import reallyAdorablePuppy from '../assets/images/cutestpuppy.jpeg';
+import HomeImage from '../assets/images/home.jpeg';
 import Typography from '@material-ui/core/Typography';
+import AutoScale from 'react-auto-scale';
 
 const styles = theme => ({
   root: {
@@ -15,7 +14,6 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    border:'1px solid black'
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -23,8 +21,7 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
   },
   pic: {
-    height: '250px',
-    borderRadius: '200px',
+    width: '100%'
   },
   title: {
     justify: 'center',
@@ -53,9 +50,11 @@ function Resume(props) {
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12}>
-          <div className={classes.image}>
-            <div><img className={classes.pic} src={reallyAdorablePuppy}/></div>
-          </div>
+          <AutoScale>
+            <div className={classes.image}>
+              <div><img className={classes.pic} src={HomeImage}/></div>
+            </div>
+          </AutoScale>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h2" gutterBottom className={classes.title}>

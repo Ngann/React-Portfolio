@@ -2,17 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import HomeImage from '../assets/images/trees.jpeg';
 import Typography from '@material-ui/core/Typography';
-import WebFont from 'webfontloader';
 import IconButton from '@material-ui/core/IconButton';
-import SvgIcon from '@material-ui/core/SvgIcon';
-import BookIcon from '@material-ui/icons/Bookmarks';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import AddIcon from '@material-ui/icons/Add';
 import FaceIcon from '@material-ui/icons/Face';
 import SaveIcon from '@material-ui/icons/Save';
 import EditIcon from '@material-ui/icons/Edit';
@@ -63,11 +56,11 @@ function Home(props) {
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12}>
-        <AutoScale>
-          <div className={classes.image}>
-          <div><img className={classes.pic} src={HomeImage}/></div>
-          </div>
-        </AutoScale>
+          <AutoScale>
+            <div className={classes.image}>
+              <div><img className={classes.pic} src={HomeImage}/></div>
+            </div>
+          </AutoScale>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h2" gutterBottom className={classes.title}>
@@ -102,35 +95,35 @@ function Home(props) {
           </Typography>
         </Grid>
         <Grid item xs sm={3}>
-        <Typography variant="button" gutterBottom>
-          <p className={classes.paper}>Rails</p>
-        </Typography>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>Rails</p>
+          </Typography>
         </Grid>
         <Grid item xs sm={3}>
-        <Typography variant="button" gutterBottom>
-          <p className={classes.paper}>Git/Github</p>
-        </Typography>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>Git/Github</p>
+          </Typography>
         </Grid>
         <Grid item xs sm={3}>
-        <Typography variant="button" gutterBottom>
-          <p className={classes.paper}>Postgres</p>
-        </Typography>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>Postgres</p>
+          </Typography>
         </Grid>
       </Grid>
 
       <div>
-      <div className={classes.about} />
-      <section className={classes.social}>
-      <IconButton color="inherit" aria-label="Edit">
-        <EditIcon />
-      </IconButton>
-      <IconButton color="inherit" aria-label="Save">
-        <SaveIcon />
-      </IconButton>
-      <IconButton color="inherit" aria-label="Face">
-        <FaceIcon />
-      </IconButton>
-      </section>
+        <div className={classes.about} />
+        <section className={classes.social}>
+          <IconButton color="inherit" aria-label="Edit">
+            <EditIcon />
+          </IconButton>
+          <IconButton color="inherit" aria-label="Save">
+            <SaveIcon />
+          </IconButton>
+          <IconButton color="inherit" aria-label="Face">
+            <FaceIcon />
+          </IconButton>
+        </section>
       </div>
     </div>
   );
