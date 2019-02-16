@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import reallyAdorablePuppy from '../assets/images/cutestpuppy.jpeg';
 import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
 
 const styles = theme => ({
   root: {
@@ -43,7 +42,12 @@ const styles = theme => ({
     color: 'red',
     border:'1px solid black',
     textAlign: 'center',
-  }
+  },
+  bigAvatar: {
+    margin: 'auto',
+    width: '50%',
+    height: 'auto',
+  },
 });
 
 function About(props) {
@@ -54,7 +58,7 @@ function About(props) {
       <Grid container spacing={24}>
         <Grid item xs={12}>
           <div className={classes.image}>
-            <div><img className={classes.pic} src={reallyAdorablePuppy}/></div>
+            <Avatar alt="Remy Sharp" src={reallyAdorablePuppy} className={classes.bigAvatar} />
           </div>
         </Grid>
         <Grid item xs={12}>
@@ -65,7 +69,7 @@ function About(props) {
       </Grid >
       <Grid container className={classes.box}>
         <Grid item xs={24}>
-          <Typography variant="button" >
+          <Typography variant="button" variant="body2" >
             <p className={classes.paper}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
           </Typography>
         </Grid>
