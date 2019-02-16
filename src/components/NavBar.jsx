@@ -10,7 +10,7 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import FaceIcon from '@material-ui/icons/Face';
 import SaveIcon from '@material-ui/icons/Save';
 import EditIcon from '@material-ui/icons/Edit';
 
@@ -78,6 +78,10 @@ const styles = theme => ({
   rightToolbar: {
     marginLeft: 'auto',
     marginRight: -12,
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
   },
   menuButton: {
     marginRight: 16,
@@ -94,7 +98,7 @@ function NavBar(props) {
         <IconButton className={classes.menuButton} aria-label="Menu" color="inherit">
           <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit">Ngan Nguyen</Typography>
+          <Typography className={classes.title} variant="title" color="inherit">Ngan Nguyen</Typography>
 
           <div className={classes.about} />
           <section className={classes.rightToolbar}>
@@ -104,8 +108,8 @@ function NavBar(props) {
           <IconButton color="inherit" aria-label="Save">
             <SaveIcon />
           </IconButton>
-          <IconButton color="inherit" aria-label="More Options">
-            <MoreVertIcon />
+          <IconButton color="inherit" aria-label="Face">
+            <FaceIcon />
           </IconButton>
           </section>
           <div className={classes.grow} />
