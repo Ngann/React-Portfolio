@@ -6,6 +6,10 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import reallyAdorablePuppy from '../assets/images/cutestpuppy.jpeg';
 import Typography from '@material-ui/core/Typography';
+import WebFont from 'webfontloader';
+import IconButton from '@material-ui/core/IconButton';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 
 const styles = theme => ({
   root: {
@@ -15,6 +19,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    border:'1px solid black'
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -26,21 +31,21 @@ const styles = theme => ({
     borderRadius: '200px',
   },
   title: {
-    fontSize: '40px',
-    fontWeight: 'bold',
-    color: 'blue',
     justify: 'center',
     textAlign: 'center',
-  },
-  stacks: {
-    width: '50%',
-    margin: 'auto',
-    color: 'white',
+    border:'1px solid black'
   },
   box: {
     width: '50%',
     margin: 'auto',
     color: 'white',
+    border:'1px solid black'
+  },
+  social: {
+    width: '80%',
+    margin: 'auto',
+    color: 'white',
+    border:'1px solid black'
   },
 });
 
@@ -56,37 +61,68 @@ function Home(props) {
           </div>
         </Grid>
         <Grid item xs={12}>
-          <Typography className={classes.title} variant="h4" color="inherit" noWrap>
+          <Typography variant="h2" gutterBottom className={classes.title}>
             Web Developer
           </Typography>
         </Grid >
       </Grid >
       <Grid container className={classes.box}>
         <Grid item xs sm={3}>
-          <p className={classes.paper}>HTML/CSS</p>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>HTML/CSS</p>
+          </Typography>
         </Grid>
         <Grid item xs sm={3}>
-          <p className={classes.paper}>JavaScript</p>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>JavaScript</p>
+          </Typography>
         </Grid>
         <Grid item xs sm={3}>
-          <p className={classes.paper}>React</p>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>React</p>
+          </Typography>
         </Grid>
         <Grid item xs sm={3}>
-          <p className={classes.paper}>Angular</p>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>Angular</p>
+          </Typography>
         </Grid>
         <Grid item xs sm={3}>
-          <p className={classes.paper}>Ruby</p>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>Ruby</p>
+          </Typography>
         </Grid>
         <Grid item xs sm={3}>
+        <Typography variant="button" gutterBottom>
           <p className={classes.paper}>Rails</p>
+        </Typography>
         </Grid>
         <Grid item xs sm={3}>
+        <Typography variant="button" gutterBottom>
           <p className={classes.paper}>Git/Github</p>
+        </Typography>
         </Grid>
         <Grid item xs sm={3}>
+        <Typography variant="button" gutterBottom>
           <p className={classes.paper}>Postgres</p>
+        </Typography>
         </Grid>
       </Grid>
+
+      <div>
+      <Grid container className={classes.social}>
+        <Grid item xs sm={3}>
+          <Typography variant="button" gutterBottom>
+            <p className={classes.paper}>Social Links</p>
+          </Typography>
+          <IconButton aria-label="Delete">
+          <SvgIcon>
+          <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" />
+          </SvgIcon>
+          </IconButton>
+        </Grid>
+      </Grid>
+      </div>
     </div>
   );
 }
