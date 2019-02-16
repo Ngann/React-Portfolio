@@ -7,18 +7,20 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
+    width: '100%',
+    justify: 'center',
   },
   image: {
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    border:'1px solid black'
+    // border:'1px solid black'
   },
   title: {
     justify: 'center',
     textAlign: 'center',
-    border:'1px solid black'
+    // border:'1px solid black',
+    fontFamily: 'Georgia'
   },
 });
 
@@ -56,14 +58,14 @@ function ProjectList(props){
       </Grid >
       <hr/>
       <Grid container spacing={12}>
-      {masterProjectList.map((ticket, index) =>
-        <Grid xs={6} s={4}>
-          <Project names={ticket.names}
-            location={ticket.location}
-            issue={ticket.issue}
-            key={index}/>
-        </Grid>
-      )}
+        {masterProjectList.map((ticket, index) =>
+          <Grid xs={6} s={4}>
+            <Project names={ticket.names}
+              location={ticket.location}
+              issue={ticket.issue}
+              key={index}/>
+          </Grid>
+        )}
       </Grid>
     </div>
   );

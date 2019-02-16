@@ -21,6 +21,7 @@
     "react-mdl": "^1.11.0",
     "react-router-dom": "^4.3.1",
     "styled-jsx": "^3.2.1",
+    "typeface-monoton": "0.0.54",
     "typeface-roboto": "0.0.54",
     "webfontloader": "^1.6.28"
   },

@@ -28,19 +28,20 @@ const styles = theme => ({
   title: {
     justify: 'center',
     textAlign: 'center',
-    border:'1px solid black'
+    // border:'1px solid black',
+    fontFamily: 'Georgia'
   },
   box: {
     width: '80%',
     margin: 'auto',
     color: 'white',
-    border:'1px solid black'
+    // border:'1px solid black'
   },
   social: {
     width: '50%',
     margin: 'auto',
     color: 'red',
-    border:'1px solid black',
+    // border:'1px solid black',
     textAlign: 'center',
   }
 });
@@ -57,6 +58,7 @@ function Resume(props) {
           </Typography>
         </Grid >
       </Grid >
+      <hr/>
       <Grid container className={classes.box}>
         <Grid item xs={24}>
           <form className={classes.container} noValidate autoComplete="off">

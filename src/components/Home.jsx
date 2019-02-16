@@ -32,19 +32,20 @@ const styles = theme => ({
   title: {
     justify: 'center',
     textAlign: 'center',
-    border:'1px solid black'
+    // border:'1px solid black',
+    fontFamily: 'Georgia'
   },
   box: {
     width: '80%',
     margin: 'auto',
     color: 'white',
-    border:'1px solid black'
+    // border:'1px solid black'
   },
   social: {
     width: '50%',
     margin: 'auto',
     color: 'red',
-    border:'1px solid black',
+    // border:'1px solid black',
     textAlign: 'center',
   }
 });
@@ -64,10 +65,11 @@ function Home(props) {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h2" gutterBottom className={classes.title}>
-            Web Developer
+            Full Stack Developer
           </Typography>
         </Grid >
       </Grid >
+      <hr/>
       <Grid container className={classes.box}>
         <Grid item xs sm={3}>
           <Typography variant="button" >

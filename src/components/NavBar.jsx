@@ -33,6 +33,7 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    fontFamily:'Georgia'
   },
   search: {
     position: 'relative',
@@ -83,10 +84,6 @@ const styles = theme => ({
       display: 'block',
     },
   },
-  menuButton: {
-    marginRight: 16,
-    marginLeft: -12,
-  },
 });
 
 function NavBar(props) {
@@ -95,22 +92,22 @@ function NavBar(props) {
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Toolbar>
-        <IconButton className={classes.menuButton} aria-label="Menu" color="inherit">
-          <MenuIcon />
+          <IconButton className={classes.menuButton} aria-label="Menu" color="inherit">
+            <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="title" color="inherit">Ngan Nguyen</Typography>
 
           <div className={classes.about} />
           <section className={classes.rightToolbar}>
-          <IconButton color="inherit" aria-label="Edit">
-            <EditIcon />
-          </IconButton>
-          <IconButton color="inherit" aria-label="Save">
-            <SaveIcon />
-          </IconButton>
-          <IconButton color="inherit" aria-label="Face">
-            <FaceIcon />
-          </IconButton>
+            <IconButton color="inherit" aria-label="Edit">
+              <EditIcon />
+            </IconButton>
+            <IconButton color="inherit" aria-label="Save">
+              <SaveIcon />
+            </IconButton>
+            <IconButton color="inherit" aria-label="Face">
+              <FaceIcon />
+            </IconButton>
           </section>
           <div className={classes.grow} />
           <div className={classes.search}>

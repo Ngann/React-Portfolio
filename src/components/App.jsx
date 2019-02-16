@@ -3,7 +3,6 @@ import NavBar from './NavBar';
 import Home from './Home';
 import Resume from './Resume';
 import About from './About';
-import Navigation from './Navigation';
 import ProjectList from './ProjectList';
 import { Switch, Route } from 'react-router-dom';
 import ContactForm from './ContactForm';
@@ -16,8 +15,9 @@ function App(){
     <div>
       <NavBar/>
       <Home/>
-      <About/>
+      <ProjectList/>
       <Resume/>
+      <About/>
       <ContactForm/>
       <Types/>
       <Switch>
