@@ -8,11 +8,16 @@ import { Switch, Route } from 'react-router-dom';
 import ContactForm from './ContactForm';
 import Types from './ImageExample';
 import Error404 from './Error404';
+import Helmet from 'react-helmet';
+
 
 
 function App(){
   return (
     <div>
+      <Helmet>
+       <style>{`body { margin: 0; width:100%;}`}</style>
+     </Helmet>
       <NavBar/>
       <Home/>
       <ProjectList/>
