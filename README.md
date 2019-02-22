@@ -7,12 +7,12 @@ _This portfolio was created with React and Material UI. The flow chart was creat
 
 * Click here to view page "Link".
 
-# ![demo](./src/assets/images/Profile.jpg)
+# ![demo](./src/assets/images/Profile2.jpg)
 
 ## Table of content
 
 - [Installation](#installation)
-- [API Setup](#API)
+- [Features](#Features)
 - [Technology](#technology)
 - [License](#license)
 
@@ -30,26 +30,20 @@ $ npm install
 ```
 $ npm start
 ```
+4. Open project  at http://localhost:8080/
 
-## API
-Create a file in the app folder named api-keys.ts
-* Firebase: Go to google firebase console, create a project and get the app API key. Add the API key to the format below and add to file api-keys.ts.
-```
-export const masterFirebaseConfig = {
-  apiKey:
-   authDomain:
-   databaseURL:
-   projectId:
-   storageBucket:
-   messagingSenderId:
-  };
-```
+## Features
+
 ## Completed Features
-* TBD
+* About Component
+* Home Component
+* Resume Coponent
 
 
 ## Planned Features
-* TBD
+* Search function for projects base on key words
+* Project component to show list of projects
+* Contact component with contact form and confirmation messages
 
 ## Technology
 * Javascript
