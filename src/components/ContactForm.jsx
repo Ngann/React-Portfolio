@@ -46,7 +46,7 @@ const styles = theme => ({
   }
 });
 
-function Resume(props) {
+function ContactForm(props) {
   const { classes } = props;
 
   return (
@@ -61,7 +61,7 @@ function Resume(props) {
       <hr/>
       <Grid container className={classes.box}>
         <Grid item xs={24}>
-          <form className={classes.container} noValidate autoComplete="off">
+          <form className={classes.container} noValidate autoComplete="off" onSubmit={handleNewTicketFormSubmission}>
             <TextField
               id="filled-name"
               label="Name"
@@ -111,8 +111,9 @@ function Resume(props) {
     </div>
   );
 }
-Resume.propTypes = {
+ContactForm.propTypes = {
   classes: PropTypes.object.isRequired,
+  onSendForm: PropTypes.func,
 };
 
 export default withStyles(styles)(Resume);
