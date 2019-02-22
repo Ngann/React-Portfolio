@@ -4,6 +4,7 @@ import Home from './Home';
 import Resume from './Resume';
 import About from './About';
 import ProjectList from './ProjectList';
+import PrivateControl from './PrivateControl';
 import ContactControl from './ContactControl';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
