@@ -48,72 +48,51 @@ const styles = theme => ({
 
 function ContactForm(props) {
   const { classes } = props;
+  let _name = null;
+  let _email = null;
+  let _phone = null;
+  let _reason = null;
+  
+  function handleNewContactFormSubmission(event) {
+    event.preventDefault();
+    console.log(_name.value);
+    _name.value ='';
+    _email.value ='';
+    _phone.value ='';
+    _reason.value ='';
+  }
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={24}>
-        <Grid item xs={12}>
-          <Typography variant="h2" gutterBottom className={classes.title}>
-            Contact
-          </Typography>
-        </Grid >
-      </Grid >
-      <hr/>
-      <Grid container className={classes.box}>
-        <Grid item xs={24}>
-          <form className={classes.container} noValidate autoComplete="off" onSubmit={handleNewTicketFormSubmission}>
-            <TextField
-              id="filled-name"
-              label="Name"
-              className={classes.textField}
-              value=""
-              margin="normal"
-              variant="filled"
-            />
-
-            <TextField
-              required
-              id="filled-email-input"
-              label="Email"
-              className={classes.textField}
-              type="email"
-              name="email"
-              autoComplete="email"
-              margin="normal"
-              variant="filled"
-            />
-
-            <TextField
-              id="filled-number"
-              label="Number"
-              value=" "
-              type="number"
-              className={classes.textField}
-              InputLabelProps=" "
-              margin="normal"
-              variant="filled"
-            />
-
-            <TextField
-              id="filled-multiline-static"
-              label="Message"
-              multiline
-              rows="4"
-              defaultValue=" "
-              className={classes.textField}
-              margin="normal"
-              variant="filled"
-            />
-            <button type='submit'>Send</button>
-          </form>
-        </Grid>
-      </Grid>
+      <form >
+      <input
+          type='text'
+          id='name'
+          placeholder='First and Lastname'
+          ref={(input) => {_name = input;}}/>
+        <input
+          type='text'
+          id='email'
+          placeholder='Email'
+          ref={(input) => {_email = input;}}/>
+          <input
+            type='text'
+            id='phone'
+            placeholder='Phone'
+            ref={(input) => {_phone = input;}}/>
+        <textarea
+          id='reason'
+          placeholder='Tell me a little about what projects you would liek to create.'
+          ref={(input) => {_reason = input;}}/>
+        <button onClick={props.onSendForm} type='submit'>Send</button>
+      </form>
     </div>
   );
 }
+
 ContactForm.propTypes = {
   classes: PropTypes.object.isRequired,
-  onSendForm: PropTypes.func,
+    onSendForm: PropTypes.func,
 };
 
-export default withStyles(styles)(Resume);
+export default withStyles(styles)(ContactForm);

@@ -9,7 +9,7 @@ class ContactControl extends React.Component {
     this.state ={
       formVisibleOnPage: true
     };
-    this.sendForm = this.sendForm.bind(this);
+    this.showForm = this.sendForm.bind(this);
   }
   
   sendForm() {
@@ -20,7 +20,7 @@ class ContactControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <ContactForm onSendForm = {this.sendForm)}/>;
+      currentlyVisibleContent = <ContactForm onSendForm={this.showForm}/>;
     } else {
       currentlyVisibleContent = <ContactConfirmation />;
     }
