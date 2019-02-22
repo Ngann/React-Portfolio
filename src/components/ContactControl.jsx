@@ -1,9 +1,10 @@
 import React from 'react';
 import ContactConfirmation from './ContactConfirmation';
 import ContactForm from './ContactForm';
+import PropTypes from "prop-types";
 
 class ContactControl extends React.Component {
-  
+
   constructor(props) {
     super(props);
     this.state ={
@@ -11,21 +12,16 @@ class ContactControl extends React.Component {
     };
     this.showForm = this.sendForm.bind(this);
   }
-  
+
   sendForm() {
     this.setState({formVisibleOnPage:false});
-    console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
-  }
-  handleAddingContactToList(newContact){
-    var newMasterContactList = this.state.masterContactList.slice();
-    newMasterContactList.push(newContact);
-    this.setState({masterContactList: newMasterContactList});
+    // console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
   }
 
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <ContactForm onSendForm={this.showForm}/>;
+      currentlyVisibleContent = <ContactForm onNewContactCreation={this.props.onNewContactCreation}/>;
     } else {
       currentlyVisibleContent = <ContactConfirmation />;
     }
@@ -36,5 +32,9 @@ class ContactControl extends React.Component {
     );
   }
 }
+
+ContactControl.propTypes = {
+  onNewContactCreation: PropTypes.func
+};
 
 export default ContactControl;

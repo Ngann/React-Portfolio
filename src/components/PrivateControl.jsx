@@ -1,17 +1,12 @@
-import { Switch, Route } from 'react-router-dom';
+import React from 'react';
+import ContactList from './ContactList';
+import ProjectForm from './ProjectForm';
 
 function PrivateControl(){
   return (
     <div>
-      <Helmet>
-        <style>{'body { margin: 0; width:100%;}'}</style>
-      </Helmet>
-      <NavBar/>
-      <Switch>
-        <Route path='/projectForm' component={ProjectForm} />
-        <Route path='/contactList' component={ContactList} />
-        <Route component={Error404} />
-      </Switch>
+      <ContactList/>
+      <ProjectForm/>
     </div>
   );
 }
