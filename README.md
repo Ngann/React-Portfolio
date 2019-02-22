@@ -7,7 +7,7 @@ _This portfolio was created with React and Material UI. The flow chart was creat
 
 * Click here to view page "Link".
 
-# ![demo](./src/assets/images/Profile2.jpg)
+# ![demo](./src/assets/images/Profile3.jpg)
 
 ## Table of content
 
@@ -35,15 +35,15 @@ $ npm start
 ## Features
 
 ## Completed Features
-* About Component
+* About Component, contains intro and resume
 * Home Component
-* Resume Coponent
-
 
 ## Planned Features
 * Search function for projects base on key words
 * Project component to show list of projects
 * Contact component with contact form and confirmation messages
+* Private component for internal use to see list of submitted contacts and form to add to Projects
+
 
 ## Technology
 * Javascript

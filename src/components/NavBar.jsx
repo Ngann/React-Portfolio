@@ -13,6 +13,7 @@ import AddIcon from '@material-ui/icons/Add';
 import FaceIcon from '@material-ui/icons/Face';
 import SaveIcon from '@material-ui/icons/Save';
 import EditIcon from '@material-ui/icons/Edit';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   root: {
@@ -90,7 +91,7 @@ function NavBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="static" style={{ background: '#2E3B55', color: '#BDB76B'}}>
         <Toolbar>
           <IconButton className={classes.menuButton} aria-label="Menu" color="inherit">
             <MenuIcon />
@@ -102,6 +103,7 @@ function NavBar(props) {
             <IconButton color="inherit" aria-label="Edit">
               <EditIcon />
             </IconButton>
+            <Link to="/contact">Contact</Link>
             <IconButton color="inherit" aria-label="Save">
               <SaveIcon />
             </IconButton>

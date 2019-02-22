@@ -56,6 +56,7 @@ function ContactForm(props) {
   function handleNewContactFormSubmission(event) {
     event.preventDefault();
     console.log(_name.value);
+    props.onNewContactCreation({name: _name.value, email: _email.value, phone: _phone.value, reason: _reason.value});
     _name.value ='';
     _email.value ='';
     _phone.value ='';
@@ -93,6 +94,7 @@ function ContactForm(props) {
 ContactForm.propTypes = {
   classes: PropTypes.object.isRequired,
     onSendForm: PropTypes.func,
+    onNewContactCreation: PropTypes.func,
 };
 
 export default withStyles(styles)(ContactForm);

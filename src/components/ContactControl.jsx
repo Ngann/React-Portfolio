@@ -7,20 +7,29 @@ class ContactControl extends React.Component {
   constructor(props) {
     super(props);
     this.state ={
-      formVisibleOnPage: true
+      formVisibleOnPage: true,
+      masterContactList:[]
     };
-    this.showForm = this.sendForm.bind(this);
+    // this.showForm = this.sendForm.bind(this);
+    this.handleAddingContactToList = this.handleAddingContactToList.bind(this);
   }
-  
-  sendForm() {
+  // 
+  // sendForm() {
+  //   this.setState({formVisibleOnPage:false});
+  //   console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
+  // }
+  // 
+  handleAddingContactToList(newContact){
+    var newMasterContactList = this.state.masterContactList.slice();
+    newMasterContactList.push(newContact);
+    this.setState({masterContactList: newMasterContactList});
     this.setState({formVisibleOnPage:false});
-    console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
   }
 
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <ContactForm onSendForm={this.showForm}/>;
+      currentlyVisibleContent = <ContactForm onNewContactCreation={this.handleAddingContactToList}/>;
     } else {
       currentlyVisibleContent = <ContactConfirmation />;
     }
@@ -31,5 +40,7 @@ class ContactControl extends React.Component {
     );
   }
 }
+
+ContactControl.propTypes = 
 
 export default ContactControl;
