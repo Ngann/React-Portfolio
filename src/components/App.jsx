@@ -17,16 +17,18 @@ function App(){
     <div>
       <Helmet>
        <style>{`body { margin: 0; width:100%;}`}</style>
-     </Helmet>
+       </Helmet>
       <NavBar/>
       <Home/>
       <ProjectList/>
       <Resume/>
       <About/>
       <ContactForm/>
-      <Types/>
       <Switch>
-        <Route exact path='/' component={ProjectList} />
+        <Route exact path='/'/>
+        <Route exact path='/projectList' component={ProjectList} />
+        <Route exact path='/resume' component={Resume} />
+        <Route exact path='/about' component={About} />
         <Route path='/contactform' component={ContactForm} />
         <Route component={Error404} />
       </Switch>
