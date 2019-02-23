@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import reallyAdorablePuppy from '../assets/images/cutestpuppy.jpeg';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
+import Resume from './Resume';
 
 const styles = theme => ({
   root: {
@@ -56,6 +57,7 @@ function About(props) {
 
   return (
     <div className={classes.root}>
+      <Resume/>
       <Grid container spacing={24}>
         <Grid item xs={12}>
           <div className={classes.image}>
