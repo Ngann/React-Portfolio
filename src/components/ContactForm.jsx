@@ -2,48 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import AutoScale from 'react-auto-scale';
-import classNames from 'classnames';
-import MenuItem from '@material-ui/core/MenuItem';
+// import Typography from '@material-ui/core/Typography';
+// import AutoScale from 'react-auto-scale';
+// import classNames from 'classnames';
+// import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
+    backgroundColor:'lightyellow',
   },
-  image: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+  container: {
+    width: '60%',
+    margin: 'auto',
+    border:'1px solid black'
   },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  pic: {
-    width: '100%'
-  },
-  title: {
-    justify: 'center',
-    textAlign: 'center',
-    // border:'1px solid black',
-    fontFamily: 'Georgia'
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 300,
   },
   box: {
-    width: '80%',
+    width: '60%',
     margin: 'auto',
-    color: 'white',
-    // border:'1px solid black'
+    border:'1px solid black'
   },
-  social: {
-    width: '50%',
-    margin: 'auto',
-    color: 'red',
-    // border:'1px solid black',
-    textAlign: 'center',
-  }
 });
 
 function ContactForm(props) {
@@ -52,7 +37,7 @@ function ContactForm(props) {
   let _email = null;
   let _phone = null;
   let _reason = null;
-  
+
   function handleNewContactFormSubmission(event) {
     event.preventDefault();
     console.log(_name.value);
@@ -65,36 +50,46 @@ function ContactForm(props) {
 
   return (
     <div className={classes.root}>
-      <form >
-      <input
-          type='text'
-          id='name'
-          placeholder='First and Lastname'
-          ref={(input) => {_name = input;}}/>
-        <input
-          type='text'
-          id='email'
-          placeholder='Email'
-          ref={(input) => {_email = input;}}/>
-          <input
-            type='text'
-            id='phone'
-            placeholder='Phone'
-            ref={(input) => {_phone = input;}}/>
-        <textarea
-          id='reason'
-          placeholder='Tell me a little about what projects you would liek to create.'
-          ref={(input) => {_reason = input;}}/>
-        <button onClick={props.onSendForm} type='submit'>Send</button>
-      </form>
+      <Grid className={classes.box} >
+        <p>Thanks for reaching out!</p>
+        <form className={classes.container} onSubmit={handleNewContactFormSubmission}>
+          <Grid item xs={12}>
+            <input className={classes.textField}
+              type='text'
+              id='name'
+              placeholder='Name'
+              ref={(input) => {_name = input;}}/>
+          </Grid>
+          <Grid item xs={12}>
+            <input className={classes.textField}
+              type='text'
+              id='email'
+              placeholder='Email'
+              ref={(input) => {_email = input;}}/>
+          </Grid>
+          <Grid item xs={12}>
+            <input className={classes.textField}
+              type='text'
+              id='phone'
+              placeholder='Phone'
+              ref={(input) => {_phone = input;}}/>
+          </Grid>
+          <Grid item xs={12}>
+            <textarea className={classes.textField}
+              id='reason'
+              placeholder='Tell me a little about what projects you would liek to create.'
+              ref={(input) => {_reason = input;}}/>
+          </Grid>
+          <button className={classes.button} type='submit'>Send</button>
+        </form>
+      </Grid>
     </div>
   );
 }
 
 ContactForm.propTypes = {
   classes: PropTypes.object.isRequired,
-    onSendForm: PropTypes.func,
-    onNewContactCreation: PropTypes.func,
+  onNewContactCreation: PropTypes.func,
 };
 
 export default withStyles(styles)(ContactForm);

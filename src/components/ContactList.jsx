@@ -7,11 +7,10 @@ function ContactList(props){
     <div>
       <hr/>
       {props.contactList.map((contact) =>
-        <Contact names={contact.name}
+        <Contact name={contact.name}
           email={contact.email}
           phone={contact.phone}
           reason={contact.reason}
-          // key={index}
           />
       )}
     </div>
