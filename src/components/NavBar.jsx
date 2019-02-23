@@ -85,27 +85,36 @@ const styles = theme => ({
       display: 'block',
     },
   },
+  linkMenu: {
+    color: 'white',
+    textDecoration: 'none',
+  },
 });
 
 function NavBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ background: '#2E3B55', color: '#BDB76B'}}>
+      <AppBar position="static" style={{ background: '#2E3B55', color: 'white'}}>
         <Toolbar>
           <IconButton className={classes.menuButton} aria-label="Menu" color="inherit">
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="title" color="inherit">Ngan Nguyen</Typography>
+          <Typography className={classes.title} variant="title" color="inherit"><Link className={classes.linkMenu} to="/">Ngan Nguyen</Link></Typography>
 
           <div className={classes.about} />
           <section className={classes.rightToolbar}>
-            <IconButton color="inherit" aria-label="Edit">
-              <EditIcon />
+            <IconButton color="inherit" aria-label="Projects">
+              <Link className={classes.linkMenu} to="/projects">Projects</Link>
             </IconButton>
-            <Link to="/contact">Contact</Link>
-            <IconButton color="inherit" aria-label="Save">
-              <SaveIcon />
+            <IconButton color="inherit" aria-label="About">
+              <Link className={classes.linkMenu} to="/about">About</Link>
+            </IconButton>
+            <IconButton color="inherit" aria-label="Contact">
+              <Link className={classes.linkMenu} to="/contact">Contact</Link>
+            </IconButton>
+            <IconButton color="inherit" aria-label="Private">
+              <Link className={classes.linkMenu} to="/private">Private</Link>
             </IconButton>
             <IconButton color="inherit" aria-label="Face">
               <FaceIcon />
